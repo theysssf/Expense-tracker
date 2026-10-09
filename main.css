@@ -1,0 +1,786 @@
+<<<<<<< HEAD
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f6fa;
+    color: #222;
+}
+
+
+header {
+    background: white;
+    padding: 20px 8%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid #ddd;
+}
+
+
+header h1 {
+    font-size: 24px;
+}
+
+
+nav {
+    display: flex;
+    gap: 10px;
+}
+
+
+nav button {
+    background: none;
+    border: none;
+
+    cursor: pointer;
+
+    font-size: 15px;
+}
+
+
+nav button:hover {
+    color: #2563eb;
+}
+
+
+main {
+    width: 84%;
+    max-width: 1200px;
+
+    margin: 40px auto;
+}
+
+
+.hidden {
+    display: none !important;
+}
+
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 30px;
+}
+
+
+.page-header h2 {
+    margin-bottom: 7px;
+}
+
+
+.page-header p {
+    color: #777;
+}
+
+
+.main-button {
+    border: none;
+    background: #2563eb;
+    color: white;
+
+    padding: 12px 18px;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+}
+
+
+.cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+
+.card {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    border: 1px solid #ddd;
+}
+
+
+.card h3 {
+    color: #777;
+
+    font-size: 15px;
+
+    margin-bottom: 15px;
+}
+
+
+.card p {
+    font-size: 25px;
+
+    font-weight: bold;
+}
+
+
+.recent-section,
+.form-section,
+.transactions-section {
+    background: white;
+
+    margin-top: 30px;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    border: 1px solid #ddd;
+}
+
+
+.section-title {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+
+.section-title button {
+    border: none;
+
+    background: none;
+
+    color: #2563eb;
+
+    cursor: pointer;
+}
+
+
+.form-section h2 {
+    margin-bottom: 20px;
+}
+
+
+form {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+
+.form-group {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+
+.form-group label {
+    font-weight: bold;
+}
+
+
+input,
+select {
+    width: 100%;
+
+    padding: 11px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 6px;
+
+    font-size: 15px;
+}
+
+
+.form-buttons {
+    display: flex;
+
+    gap: 10px;
+
+    align-items: end;
+}
+
+
+.form-buttons button {
+    padding: 11px 18px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    background: #2563eb;
+
+    color: white;
+}
+
+
+.form-buttons .cancel-button {
+    background: #777;
+}
+
+
+.tools-section {
+    margin-top: 30px;
+
+    display: grid;
+
+    grid-template-columns:
+        2fr 1fr 1fr 1fr;
+
+    gap: 12px;
+}
+
+
+.transaction-container {
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+
+    padding: 20px;
+
+    margin-bottom: 15px;
+}
+
+
+.transaction-container p {
+    margin-bottom: 8px;
+}
+
+
+.transaction-buttons {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 15px;
+}
+
+
+.transaction-buttons button {
+    padding: 8px 15px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+
+.Edit {
+    background: #e5e7eb;
+}
+
+
+.Delete {
+    background: #ef4444;
+
+    color: white;
+}
+
+
+.empty-message {
+    text-align: center;
+
+    color: #777;
+
+    padding: 30px;
+}
+
+
+.recent-transaction {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 15px 0;
+
+    border-bottom: 1px solid #eee;
+}
+
+
+.recent-transaction h3 {
+    margin-bottom: 5px;
+}
+
+
+.recent-transaction p {
+    color: #777;
+
+    font-size: 14px;
+}
+
+
+@media (max-width: 800px) {
+
+    header {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+
+    .cards {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    form {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .tools-section {
+        grid-template-columns:
+            1fr;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    main {
+        width: 92%;
+    }
+
+
+    .cards {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .page-header {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+=======
+@import url("https://fonts.googleapis.com/css2?family=Special+Elite&family=Inter:wght@400;500;600;700&display=swap");
+
+/* ===================================================================
+   Notes — styled like index cards pinned to a board.
+   Tokens
+   --board        page background (chalkboard)
+   --board-line   faint texture on the board
+   --paper        card background (index card)
+   --ink          primary text
+   --ink-soft     secondary text
+   --rule         ruled-line blue (notebook rule)
+   --margin       margin-rule red (also the "remove" color)
+   --mustard      pin / "edit" accent
+   =================================================================== */
+
+:root {
+    --board: #1f3a2e;
+    --board-line: #26473686;
+    --paper: #fbf8ef;
+    --paper-edge: #eee7d3;
+    --ink: #232019;
+    --ink-soft: #6b6357;
+    --rule: #3457a6;
+    --margin: #c0392b;
+    --mustard: #e0a526;
+    --radius: 3px;
+    --font-display: "Special Elite", "Courier New", monospace;
+    --font-body: "Inter", system-ui, sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--ink);
+    background: var(--board);
+    background-image:
+        repeating-linear-gradient(
+            0deg,
+            transparent 0 39px,
+            var(--board-line) 39px 40px
+        );
+    min-height: 100vh;
+}
+
+/* ---------- layout shell ---------- */
+
+.container {
+    padding: 32px 16px 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.container::before {
+    content: "Notes";
+    display: block;
+    width: 100%;
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 5vw, 2.75rem);
+    letter-spacing: 0.5px;
+    color: var(--paper);
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.25);
+    text-align: center;
+    margin-bottom: 36px;
+}
+
+/* ---------- the "new note" card ---------- */
+
+.container #createNote {
+    width: 100%;
+    max-width: 460px;
+    margin-bottom: 48px;
+}
+
+#createNote form {
+    background: var(--paper);
+    border-radius: var(--radius);
+    padding: 24px 24px 20px 44px;
+    position: relative;
+    box-shadow:
+        0 14px 30px rgba(0, 0, 0, 0.28),
+        0 2px 0 var(--paper-edge);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+/* red margin rule, like a legal pad */
+#createNote form::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 28px;
+    width: 2px;
+    background: var(--margin);
+    opacity: 0.55;
+}
+
+#createNote form::after {
+    content: "New note";
+    order: -1;
+    font-family: var(--font-display);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--ink-soft);
+    margin-bottom: 14px;
+}
+
+form .inputs {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+form .inputs input,
+form .inputs textarea {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    padding: 10px 4px;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid var(--paper-edge);
+    background: transparent;
+    color: var(--ink);
+    margin-bottom: 18px;
+    outline-offset: 2px;
+}
+
+form .inputs input::placeholder ,
+form .inputs textarea::placeholder {
+    color: #b5ac99;
+}
+
+form .inputs textarea:focus-visible 
+form .inputs input:focus-visible {
+    border-bottom-color: var(--rule);
+}
+
+form .inputs #newNoteTitle {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+}
+
+form .inputs #newNoteContent {
+    height: 90px;
+}
+
+form .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+    width: 100%;
+}
+
+form .buttons button {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.9rem;
+    border: none;
+    padding: 10px 20px;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: transform 0.12s ease, filter 0.12s ease;
+}
+
+form .buttons button:hover {
+    filter: brightness(1.08);
+}
+
+form .buttons button:active {
+    transform: translateY(1px);
+}
+
+form .buttons button:focus-visible {
+    outline: 2px solid var(--paper);
+    outline-offset: 2px;
+}
+
+form .buttons #cancel {
+    color: var(--margin);
+    background: transparent;
+    border: 1px solid var(--margin);
+}
+
+form .buttons #done {
+    color: var(--paper);
+    background: #1f6b4a;
+}
+
+/* ---------- notes grid ---------- */
+
+#existedNotes {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 28px;
+}
+
+#existedNotes:empty::before {
+    content: "No notes yet — write your first one above.";
+    grid-column: 1 / -1;
+    text-align: center;
+    color: #cfe0d6;
+    font-style: italic;
+    padding: 20px;
+}
+
+#existedNotes > div {
+    background: var(--paper);
+    border-radius: var(--radius);
+    padding: 20px 20px 16px 38px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    box-shadow:
+        0 10px 22px rgba(0, 0, 0, 0.22),
+        0 2px 0 var(--paper-edge);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+/* margin rule on every card */
+#existedNotes > div::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 24px;
+    width: 2px;
+    background: var(--margin);
+    opacity: 0.5;
+}
+
+/* the pin — color cycles through the three accents */
+#existedNotes > div::after {
+    content: "";
+    position: absolute;
+    top: -7px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--margin);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+}
+
+#existedNotes > div:nth-child(3n + 2)::after {
+    background: var(--rule);
+}
+
+#existedNotes > div:nth-child(3n)::after {
+    background: var(--mustard);
+}
+
+/* scattered-on-a-board feel, alternating tilt */
+#existedNotes > div:nth-child(odd) {
+    transform: rotate(-0.6deg);
+}
+
+#existedNotes > div:nth-child(even) {
+    transform: rotate(0.6deg);
+}
+
+#existedNotes > div:hover,
+#existedNotes > div:focus-within {
+    transform: rotate(0deg) translateY(-3px);
+    box-shadow:
+        0 16px 28px rgba(0, 0, 0, 0.3),
+        0 2px 0 var(--paper-edge);
+}
+
+#existedNotes > div h3.title {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+#existedNotes > div p.content {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--ink);
+    margin-bottom: 12px;
+    /* faint ruled lines under the note body, like paper */
+    background-image: repeating-linear-gradient(
+        0deg,
+        transparent 0 27px,
+        var(--paper-edge) 27px 28px
+    );
+}
+
+#existedNotes > div span.words {
+    font-family: var(--font-body);
+    color: var(--ink-soft);
+    font-size: 0.75rem;
+    letter-spacing: 0.3px;
+    margin-bottom: 16px;
+}
+
+#existedNotes > div p.id {
+    display: none;
+}
+
+#existedNotes > div .buttonsBox {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    margin-top: auto;
+}
+
+#existedNotes > div .buttonsBox button {
+    flex: 1;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.85rem;
+    border: none;
+    padding: 9px 12px;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: transform 0.12s ease, filter 0.12s ease;
+}
+
+#existedNotes > div .buttonsBox button:hover {
+    filter: brightness(1.08);
+}
+
+#existedNotes > div .buttonsBox button:active {
+    transform: translateY(1px);
+}
+
+#existedNotes > div .buttonsBox button:focus-visible {
+    outline: 2px solid var(--ink);
+    outline-offset: 2px;
+}
+
+#existedNotes > div button.edit {
+    background-color: var(--mustard);
+    color: #2b2110;
+}
+
+#existedNotes > div button.remove {
+    background-color: var(--margin);
+    color: var(--paper);
+}
+
+/* respect reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+    #existedNotes > div,
+    form .buttons button,
+    #existedNotes > div .buttonsBox button {
+        transition: none;
+    }
+    #existedNotes > div:nth-child(odd),
+    #existedNotes > div:nth-child(even) {
+        transform: none;
+    }
+}
+
+/* ---------- responsive grid ---------- */
+
+@media (min-width: 640px) {
+    #existedNotes {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+    }
+}
+
+@media (min-width: 970px) {
+    #existedNotes {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 36px;
+    }
+}
+
+@media (max-width: 420px) {
+    .container {
+        padding: 24px 12px 60px;
+    }
+    #createNote form {
+        padding: 20px 18px 18px 36px;
+    }
+    #existedNotes > div {
+        padding: 18px 16px 14px 32px;
+    }
+>>>>>>> 5c489352730e08058a69d58682cf458c5f157416
+}
